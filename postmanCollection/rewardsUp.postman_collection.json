@@ -1,0 +1,202 @@
+{
+	"info": {
+		"_postman_id": "a7b669e0-d22c-4dcf-bf5d-bb4b3590b230",
+		"name": "rewardsUp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18008141"
+	},
+	"item": [
+		{
+			"name": "Create Nodes",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nodes\": [\n    {\n        \"id\": \"node-0d9d4733-e48c-41fd-a41f-d93cc4718d97\",\n        \"type\": \"start\",\n        \"name\": \"start\",\n        \"path\": [\n            \"0\"\n        ],\n        \"value\": true\n    },\n    {\n        \"id\": \"trigger-221ad55f-f9e6-4330-b7a6-99b0337bdce5\",\n        \"type\": \"trigger\",\n        \"name\": \"Trigger\",\n        \"path\": [\n            \"1\"\n        ],\n        \"configuring\": false\n    },\n    {\n        \"id\": \"branch-a430bc22-cc43-43dc-b0ba-4babf064894d\",\n        \"type\": \"branch\",\n        \"name\": \"Decision\",\n        \"children\": [\n            {\n                \"id\": \"condition-c88d5309-fb15-483e-a89f-03365c8e7273\",\n                \"type\": \"condition\",\n                \"name\": \"Condition\",\n                \"children\": [],\n                \"path\": [\n                    \"2\",\n                    \"children\",\n                    \"0\"\n                ]\n            },\n            {\n                \"id\": \"condition-3520d1b5-ea1b-48d5-ac23-d697d6dcf1a5\",\n                \"type\": \"condition\",\n                \"name\": \"Condition\",\n                \"children\": [],\n                \"path\": [\n                    \"2\",\n                    \"children\",\n                    \"1\"\n                ]\n            }\n        ],\n        \"path\": [\n            \"2\"\n        ]\n    },\n    {\n        \"id\": \"node-b106675a-5148-4a2e-aa86-8e06abd692d1\",\n        \"type\": \"end\",\n        \"name\": \"end\",\n        \"path\": [\n            \"3\"\n        ],\n        \"value\": true\n    }\n],\n    \"connections\": \"customer-journey\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/customer-journeys",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"customer-journeys"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Node",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/customer-journeys/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"customer-journeys",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "customer-journey"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get ALL Nodes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/customer-journeys",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"customer-journeys"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Node",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nodes\": \"data1\",\n    \"connections\": \"data2\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/customer-journeys/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"customer-journeys",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "658ddadeb0d3eaf74d5a1f5c"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Node",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/customer-journeys/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"customer-journeys",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "658ddadeb0d3eaf74d5a1f5c"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"admin\",\n    \"password\":\"admin\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzAzODUzNzAwLCJleHAiOjE3MDM4NTczMDB9.LRY8vgPIaqzJG9KBwwkAE23HXQmq0y5j0XUeU_zjRd4",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
