@@ -2,7 +2,7 @@ import axios from 'axios';
 
 
 const axiosInstance = axios.create({
-    baseURL: import.meta.env.BASE_URL || 'http://localhost:8000',
+    baseURL: import.meta.env.BASE_URL || "https://react-flow-builder.onrender.com",
     timeout: 5000,
     headers: {
         'Content-Type': 'application/json',
