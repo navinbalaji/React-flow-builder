@@ -70,13 +70,13 @@ The Abandoned Cart Recovery System is a web application designed to help eCommer
 
 ### Login
 
-<image src="Screenshots/login.png">
+<image src="Screenshots/login.webp">
 
 ### Dashboard
 
-<image src="Screenshots/dashboard.png">
+<image src="Screenshots/dashboard.webp">
 
 ### Dashboard with nodes
 
-<image src="Screenshots/node.png">
+<image src="Screenshots/node.webp">
 </details>
