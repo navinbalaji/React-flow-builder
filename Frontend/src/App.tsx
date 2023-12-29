@@ -1,6 +1,6 @@
 import React, { Suspense } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
-import { Spin, message } from "antd";
+import { Spin } from "antd";
 
 const LoginLazy = React.lazy(() => import("./component/Login"));
 const ComponentLayoutLazy = React.lazy(() => import("./component/Layout"));
